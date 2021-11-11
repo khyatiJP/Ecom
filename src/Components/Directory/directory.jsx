@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { MenuItem } from '../MenuItem/menu'
+import  Menu  from '../Menu/menu'
 import './dierctory.scss'
 
 export const Directory = () => {
@@ -41,9 +41,10 @@ export const Directory = () => {
         ]
     })
     return (
+     
         <div className='directory-menu'>
             {items.sections.map((list) => {
-                return <MenuItem menulist={list} />
+                return <Menu menulist={list}  key={list.id}/>
             })
             }
         </div>
