@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes, Link,useLocation} from 'react-router-dom';
 import { Directory } from "../Directory/directory";
 
@@ -6,15 +6,17 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
   }
 export const Item =()=>{
-    let query = useQuery();
-    
-//  const Result =fetch(`https://pixabay.com/api/?key=23641578-50aa901f76bb38046ae858bc9&q=${props.value}&image_type=photo`)
-//   .then(response=>response.json().data.hits);
-//   console.log(Result);
+    let query = useQuery(); 
+   const [imagelist,SetImage]=useState({})
+   fetch(`https://pixabay.com/api/?key=23641578-50aa901f76bb38046ae858bc9&q=${query.get("title")}&image_type=photo`)
+    .then(response=> response.json()
+    .then(data=>SetImage({list: data.hits})));
+ 
+   
 return(
     <div>
         <Link to='/'>Back</Link>
-        Heelo
+      { console.log(imagelist.list)}
         <Routes>
             <Route exact path='/' element={<Directory/>} />
         </Routes>
