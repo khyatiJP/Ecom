@@ -1,11 +1,9 @@
 import React from "react";
 import { Route, Routes, Link } from 'react-router-dom';
-import './menu.scss'
+import './Menu.scss'
 import { Item } from '../MenuItem/Item'
 
 const Menu = ({ menulist }) => {
-
-
     return (
      
             <div className={`${menulist.size} menu-item`}>

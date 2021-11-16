@@ -1,9 +1,9 @@
 
 import './App.css';
-import { Directory } from './Components/Directory/directory'
+import { Directory } from './Components/Directory/Directory'
 import { Item } from './Components/MenuItem/Item'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import "antd/dist/antd.css";
 
 //import ShopPage from 'Components/pages/itemlist/itemlist.jsx';
 

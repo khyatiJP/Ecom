@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes, Link, useLocation } from 'react-router-dom';
-import { Directory } from "../Directory/directory";
-import './itemstyle.scss'
+import { Directory } from "../Directory/Directory";
+import './Itemstyle.scss'
 
 export const Item = () => {
     const [imagelist, SetImage] = useState({data: []})
@@ -9,8 +9,7 @@ export const Item = () => {
     useEffect(() => {
         fetch(`https://pixabay.com/api/?key=23641578-50aa901f76bb38046ae858bc9&q=${query.get("title")}&image_type=photo`)
             .then(response => response.json()
-                .then(data => {
-                    console.log(data.hits)
+                .then(data => {                  
                     SetImage({data:data.hits})
                 }));
     }, [])    

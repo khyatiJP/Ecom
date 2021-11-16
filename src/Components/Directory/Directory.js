@@ -1,6 +1,6 @@
 import React,{useState} from "react";
-import  Menu  from '../Menu/menu'
-import './dierctory.scss'
+import  Menu  from '../Menu/Menu'
+import './Directory.scss'
 
 export const Directory = () => {
 
