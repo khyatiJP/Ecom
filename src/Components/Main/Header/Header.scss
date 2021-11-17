@@ -1,13 +1,13 @@
 .HeaderMain{
-    background-color: 'white';
+  
     font-size: large;
-
+   
     
 }
 .HeaderLeft
 {
    float: left;
-   width:50vh;
+   width:50%;
    
 
    .HButton{
@@ -18,8 +18,8 @@
     float: right;
     margin: 0;
     padding-top: 20px; 
-    margin-right:20px; 
-  
+    margin-right:10px; 
+    width:15%;
    
 }
 

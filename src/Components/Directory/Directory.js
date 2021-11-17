@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import  Menu  from '../Menu/Menu'
 import './Directory.scss'
-
+import { Row, Col } from 'antd';
 export const Directory = () => {
 
     const [items] = useState({
@@ -41,13 +41,16 @@ export const Directory = () => {
         ]
     })
     return (
-     
+        <Row>
+        
         <div className='directory-menu'>
             {items.sections.map((list) => {
                 return <Menu menulist={list}  key={list.id}/>
             })
             }
         </div>
+        
+        </Row>
     )
 
 }

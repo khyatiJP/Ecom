@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes, Link, useLocation } from 'react-router-dom';
 import { Directory } from "../Directory/Directory";
 import './Itemstyle.scss'
+import { Row, Col, Button } from 'antd';
 
 export const Item = () => {
     const [imagelist, SetImage] = useState({data: []})
@@ -14,18 +15,24 @@ export const Item = () => {
                 }));
     }, [])    
     return (
-        <div >
-            <Link to='/'>Back</Link>
-            <div className='itemlist'>
+        <div>
+        
+        <Row gutter={[16, 24]}>    
                 {imagelist.data.map((list) => {
-                    return (<img src={list.previewURL} key={list.id}></img>)
+                    return ( <div><Col className="gutter-row" span={3}> 
+                    <img className='imgList' src={list.previewURL} key={list.id}></img> 
+                    <div className='ShopDiv'><Button type="link">Shop Now</Button></div>
+                    </Col></div>  )
                 })}
-            </div>
+                
             <Routes>
                 <Route exact path='/' element={<Directory />} />
             </Routes>
-        </div>
-
+           
+           
+           
+        </Row>
+    </div> 
     )
 
 }

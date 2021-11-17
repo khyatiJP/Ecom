@@ -1,8 +1,29 @@
-.itemlist {
-min-width: 100px;
-flex: 1 1 auto;
-flex-direction: column;
-align-items: baseline;
-min-height: 200px;
-max-height: 200px;
+
+
+    .itemDiv
+    {
+        display:flex;
+        flex-flow: row wrap;
+        justify-content:space-around;
+   
+       
+    &:first-child {
+    margin-right: 7.5px;
+  }
+
+  &:last-child {
+    margin-left: 7.5px;
+  }
+ 
+}
+.ShopDiv{
+  text-align: center;    
+    background-color: white;
+    opacity: 0.7;
+    width:150px;
+}
+
+.imgList{
+  height: 100px;
+  width: 150px
 }
