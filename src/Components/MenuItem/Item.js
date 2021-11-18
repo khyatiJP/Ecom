@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { Directory } from "../Directory/Directory";
+import { Landing } from "../../Pages/Landing/Landing";
 import './Itemstyle.scss'
 import { Row, Col, Button } from 'antd';
 
@@ -26,7 +26,7 @@ export const Item = () => {
                 })}
                 
             <Routes>
-                <Route exact path='/' element={<Directory />} />
+                <Route exact path='/' element={<Landing />} />
             </Routes>
            
            

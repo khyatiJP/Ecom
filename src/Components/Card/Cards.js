@@ -1,18 +1,16 @@
 import React from 'react';    
 import PropTypes from 'prop-types';
-import { CardFrame } from './cardstyle';
+import { CardFrame } from './Cardstyle';
 import Heading from '../Heading/Heading'
 
 const Cards = props => {
   const {
     title,
-    children,
-    more,
-    moreText,
+    children,   
     size,
     headless,
     caption,
-    isbutton,
+   
     bodyStyle,
     headStyle,
     border,

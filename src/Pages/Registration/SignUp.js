@@ -1,8 +1,8 @@
 import React from "react";
 import { Row, Col, Form, Input, Button } from 'antd';
 import FeatherIcon from 'feather-icons-react';
-import {FormValidationWrap, VerticalFormStyleWrap } from './Style';
-import { Cards } from '../Card/cards-frame';
+import {FormValidationWrap, VerticalFormStyleWrap } from './SignUpStyle';
+import { Cards } from '../../Components/Card/Cards';
 export const SignUp = () => {
 
     const validateMessages = {

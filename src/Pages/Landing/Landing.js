@@ -1,8 +1,8 @@
 import React,{useState} from "react";
-import  Menu  from '../Menu/Menu'
-import './Directory.scss'
+import  Menu  from '../../Components/Menu/Menu'
+import './Landing.scss'
 import { Row} from 'antd';
-export const Directory = () => {
+export const Landing = () => {
 
     const [items] = useState({
         sections: [

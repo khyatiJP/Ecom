@@ -1,8 +1,8 @@
 
 import './App.css';
-import { Directory } from './Components/Directory/Directory'
+import { Landing } from './Pages/Landing/Landing'
 import { Item } from './Components/MenuItem/Item'
-import { SignUp } from './Components/Registration/SignUp'
+import { SignUp } from './Pages/Registration/SignUp'
 
 import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
 import "antd/dist/antd.css";
@@ -26,7 +26,7 @@ function App() {
       
         <Content style={{ padding: '30px 50px' }}>   
             <Routes>
-              <Route path="//*" element={<Directory />} />
+              <Route path="//*" element={<Landing />} />
               <Route path="/MenuItem/*" element={<Item />} />
               <Route path="/SignUp" element={<SignUp />} />
 
