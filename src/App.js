@@ -19,7 +19,7 @@ function App() {
         <div className="logo" >    
             <Link to='/'><img src={logo} style={{ height: '50px' }} alt=''/></Link>
            <Button  type="primary" className='HeaderBtn'>
-             <Link to='/SignUp'>Sign Up</Link></Button >
+             <Link to='/SignUp'>Login</Link></Button >
          </div>
           
         </Header>
