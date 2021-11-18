@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes, Link, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { Directory } from "../Directory/Directory";
 import './Itemstyle.scss'
 import { Row, Col, Button } from 'antd';
@@ -20,7 +20,7 @@ export const Item = () => {
         <Row gutter={[16, 24]}>    
                 {imagelist.data.map((list) => {
                     return ( <div><Col className="gutter-row" span={3}> 
-                    <img className='imgList' src={list.previewURL} key={list.id}></img> 
+                    <img className='imgList' src={list.previewURL} key={list.id} alt={list.id}></img> 
                     <div className='ShopDiv'><Button type="link">Shop Now</Button></div>
                     </Col></div>  )
                 })}

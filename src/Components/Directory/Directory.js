@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import  Menu  from '../Menu/Menu'
 import './Directory.scss'
-import { Row, Col } from 'antd';
+import { Row} from 'antd';
 export const Directory = () => {
 
     const [items] = useState({
