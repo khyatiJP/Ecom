@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { Landing } from "../../Pages/Landing/Landing";
+import { Landing } from "../../pages/Landing/Landing";
 import './Itemstyle.scss'
 import { Row, Col, Button } from 'antd';
 

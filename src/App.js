@@ -1,8 +1,8 @@
 
 import './App.css';
-import { Landing } from './Pages/Landing/Landing'
-import { Item } from './Components/MenuItem/Item'
-import { SignUp } from './Pages/Registration/SignUp'
+import { Landing } from './pages/Landing/Landing'
+import { Item } from './components/MenuItem/Item'
+import { SignUp } from './pages/Registration/SignUp'
 
 import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
 import "antd/dist/antd.css";
