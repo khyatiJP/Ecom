@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import  Menu  from '../../components/Menu/Menu'
-import './Landing.scss'
+import './LandingStyle.scss'
 import { Row} from 'antd';
 export const Landing = () => {
 

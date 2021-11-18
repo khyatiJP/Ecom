@@ -1,6 +1,6 @@
 import React from 'react';    
 import PropTypes from 'prop-types';
-import { CardFrame } from './Cardstyle';
+import { CardFrame } from './CardStyle';
 import Heading from '../Heading/Heading'
 
 const Cards = props => {
