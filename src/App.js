@@ -1,18 +1,20 @@
 
-import './App.css';
+import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
+import { Layout,Button } from 'antd';
+import { Provider } from 'react-redux';
 import { Landing } from './pages/Landing/Landing'
 import { Item } from './components/MenuItem/Item'
 import { SignUp } from './pages/Registration/SignUp'
-
-import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
+import './App.css';
 import "antd/dist/antd.css";
-//import ShopPage from 'Components/pages/itemlist/itemlist.jsx';
-import { Layout,Button } from 'antd';
-import logo from './assets/images/logo.png'
-const { Header, Content, Footer } = Layout;
 
+import logo from './assets/images/logo.png'
+
+
+const { Header, Content, Footer } = Layout;
 function App() {
   return (
+    <Provider>
     <BrowserRouter>
       <Layout className="layout">
         <Header>    
@@ -36,6 +38,7 @@ function App() {
         <Footer style={{ textAlign: 'center' }}></Footer>
       </Layout>
     </BrowserRouter>
+    </Provider>
   );
 }
 export default App;
