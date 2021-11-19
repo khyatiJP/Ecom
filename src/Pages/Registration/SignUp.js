@@ -3,6 +3,7 @@ import { Row, Col, Form, Input, Button } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import {FormValidationWrap, VerticalFormStyleWrap } from './SignUpStyle';
 import { Cards } from '../../components/Card/Cards'
+
 export const SignUp = () => {
 
     const validateMessages = {
