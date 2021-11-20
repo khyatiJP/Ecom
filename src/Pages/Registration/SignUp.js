@@ -3,7 +3,7 @@ import { Row, Col, Form, Input, Button } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import {FormValidationWrap, VerticalFormStyleWrap } from './SignUpStyle';
 import { Cards } from '../../components/Card/Cards'
-
+import {signWithGoogle} from '../../utility/firebase'
 export const SignUp = () => {
 
     const validateMessages = {
@@ -33,6 +33,9 @@ export const SignUp = () => {
                                 <div className="sDash_form-action">
                                     <Button className="btn-signin" type="primary" size="large" htmlType="submit">
                                         Save
+                                    </Button>
+                                    <Button className="btn-signin" type="primary" size="large" onClick={signWithGoogle}>
+                                        Sign In With Google
                                     </Button>
                                     <Button className="btn-signin"  type="light" size="large">
                                         Cancel

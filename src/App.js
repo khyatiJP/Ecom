@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
 import { Layout,Button } from 'antd';
 import { Provider } from 'react-redux';
+import store from './reducer/store';
 import { Landing } from './pages/Landing/Landing'
 import { Item } from './components/MenuItem/Item'
 import { SignUp } from './pages/Registration/SignUp'
@@ -14,7 +15,7 @@ import logo from './assets/images/logo.png'
 const { Header, Content, Footer } = Layout;
 function App() {
   return (
-    <Provider>
+    <Provider store={store}>
     <BrowserRouter>
       <Layout className="layout">
         <Header>    
