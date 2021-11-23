@@ -3,9 +3,8 @@ import { Row, Col, Form, Input, Button } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import {FormValidationWrap, VerticalFormStyleWrap } from './SignUpStyle';
 import { Cards } from '../../components/Card/Cards'
-import {signWithGoogle} from '../../utility/firebase'
+import {signWithGoogle,auth} from '../../utility/firebase'
 export const SignUp = () => {
-
     const validateMessages = {
        
       };
@@ -36,6 +35,9 @@ export const SignUp = () => {
                                     </Button>
                                     <Button className="btn-signin" type="primary" size="large" onClick={signWithGoogle}>
                                         Sign In With Google
+                                    </Button>
+                                    <Button className="btn-signin" type="primary" size="large" onClick={()=>auth.signOut()}>
+                                        Sign Out from Google
                                     </Button>
                                     <Button className="btn-signin"  type="light" size="large">
                                         Cancel
