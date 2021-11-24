@@ -1,33 +1,20 @@
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { Layout, Button } from 'antd';
-import { Provider } from 'react-redux';
+import { BrowserRouter, Routes, Route, Link  } from 'react-router-dom';
 import store from './reducer/store';
+import { Provider,connect } from 'react-redux';
+import { Layout } from 'antd';
 import { Landing } from './pages/Landing/Landing'
 import { Item } from './components/MenuItem/Item'
-import { SignUp } from './pages/Registration/SignUp'
+import  SignUp  from './pages/Registration/SignUp'
+
 import './App.css';
 import "antd/dist/antd.css";
 import logo from './assets/images/logo.png'
-import { auth ,createUserProfile} from './utility/firebase'
-
-import { useEffect, useState } from 'react';
 
 const { Header, Content, Footer } = Layout;
+
 function App() {
  
-  const [currentUser, SetCurrentUser] = useState('')
-  useEffect(() => {
-    auth.onAuthStateChanged(async user => {
-      createUserProfile(user)
-     // console.log(user);
-     // const firestore = firebase.firestore();
-     // firestore.collection('User');
-     // SetCurrentUser(user);
-    })
-
-  }, []);
-  
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -35,18 +22,17 @@ function App() {
           <Header>
             <div className="logo" >
               <Link to='/'><img src={logo} style={{ height: '50px' }} alt='' /></Link>
-              <Button type="primary" className='HeaderBtn'>
-                <Link to='/SignUp'>Login</Link></Button >
-             
+             {/* <Button type="primary" className='HeaderBtn'>
+                <Link to='/'>Sign In</Link></Button >*/}
             </div>
 
           </Header>
 
           <Content style={{ padding: '30px 50px' }}>
             <Routes>
-              <Route path="//*" element={<Landing />} />
+              <Route path="/" element={<SignUp/>} />
               <Route path="/MenuItem/*" element={<Item />} />
-              <Route path="/SignUp" element={<SignUp />} />
+              <Route path="/Landing" element={<Landing />} />
 
             </Routes>
 
@@ -57,4 +43,5 @@ function App() {
     </Provider>
   );
 }
+
 export default App;

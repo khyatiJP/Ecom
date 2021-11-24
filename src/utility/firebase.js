@@ -18,12 +18,10 @@ const userRef= firestore.doc('/User/Nq16ppzIcKHfZQ9qYAXp');
 const userSnap=await userRef.get();
 
 if(userSnap.exists)
-{
-   
+{  
     const {displayName,email}=userauth;
     const cdate= new Date();
     try{
-
         await userRef.set({
             displayName,
             email,
