@@ -5,7 +5,7 @@ import FeatherIcon from 'feather-icons-react';
 import { FormValidationWrap, VerticalFormStyleWrap } from './SignUpStyle';
 import { Cards } from '../../components/Card/Cards'
 import { signWithGoogle, auth } from '../../utility/firebase'
-import { setCurrentUser } from '../../reducer/User/UserAction'
+import { setCurrentUser } from './SignupAction'
 import { useDispatch } from "react-redux";
 
 const SignUp = ({ currentUser }) => {

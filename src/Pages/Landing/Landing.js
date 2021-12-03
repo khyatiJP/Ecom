@@ -1,56 +1,34 @@
-import React,{useState} from "react";
-import  Menu  from '../../components/Menu/Menu'
+import React, { useEffect, useState } from "react";
+import Menu from '../../components/Menu/Menu'
 import './LandingStyle.scss'
-import { Row} from 'antd';
-export const Landing = () => {
+import fetchCategory from './Action-landing'
+import { useDispatch, useSelector, connect } from "react-redux";
+import { Row } from 'antd';
 
-    const [items] = useState({
-        sections: [
-            {
-                title: 'hats',
-                imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
-                id: 1,
-                linkUrl: 'hats'
-            },
-            {
-                title: 'jackets',
-                imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
-                id: 2,
-                linkUrl: ''
-            },
-            {
-                title: 'sneakers',
-                imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-                id: 3,
-                linkUrl: ''
-            },
-            {
-                title: 'womens',
-                imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-                size: 'large',
-                id: 4,
-                linkUrl: ''
-            },
-            {
-                title: 'mens',
-                imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-                size: 'large',
-                id: 5,
-                linkUrl: ''
-            }
-        ]
-    })
+export const Landing = () => {
+    
+    var dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchCategory())
+
+    }, [])
+   const  items = useSelector((state) => state.landingimg) 
     return (
         <Row>
-        
-        <div className='directory-menu'>
-            {items.sections.map((list) => {
-                return <Menu menulist={list}  key={list.id}/>
-            })
-            }
-        </div>
-        
+            <div className='directory-menu'>
+                {
+                    (items) ?
+                        items.map((list) => {
+                            return <Menu menulist={list} key={list.id} />
+
+                        }) : ''
+                }
+
+            </div>
         </Row>
+
     )
 
 }
+
+///

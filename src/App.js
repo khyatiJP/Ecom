@@ -1,12 +1,10 @@
 
 import { BrowserRouter, Routes, Route, Link  } from 'react-router-dom';
-import store from './reducer/store';
-import { Provider,connect } from 'react-redux';
+
 import { Layout } from 'antd';
 import { Landing } from './pages/Landing/Landing'
 import { Item } from './components/MenuItem/Item'
 import  SignUp  from './pages/Registration/SignUp'
-
 import './App.css';
 import "antd/dist/antd.css";
 import logo from './assets/images/logo.png'
@@ -16,7 +14,7 @@ const { Header, Content, Footer } = Layout;
 function App() {
  
   return (
-    <Provider store={store}>
+   
       <BrowserRouter>
         <Layout className="layout">
           <Header>
@@ -30,7 +28,7 @@ function App() {
 
           <Content style={{ padding: '30px 50px' }}>
             <Routes>
-              <Route path="/" element={<SignUp/>} />
+              <Route path="/" element={<Landing/>} />
               <Route path="/MenuItem/*" element={<Item />} />
               <Route path="/Landing" element={<Landing />} />
 
@@ -40,7 +38,7 @@ function App() {
           <Footer style={{ textAlign: 'center' }}></Footer>
         </Layout>
       </BrowserRouter>
-    </Provider>
+  
   );
 }
 
