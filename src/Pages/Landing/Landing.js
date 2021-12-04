@@ -6,13 +6,11 @@ import { useDispatch, useSelector, connect } from "react-redux";
 import { Row } from 'antd';
 
 export const Landing = () => {
-    
     var dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchCategory())
-
     }, [])
-   const  items = useSelector((state) => state.landingimg) 
+    const items = useSelector((state) => state.landingimg)
     return (
         <Row>
             <div className='directory-menu'>

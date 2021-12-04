@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Routes, Route, Link  } from 'react-router-dom';
 
-import { Layout } from 'antd';
+import { Layout,Button } from 'antd';
 import { Landing } from './pages/Landing/Landing'
 import { Item } from './components/MenuItem/Item'
 import  SignUp  from './pages/Registration/SignUp'
@@ -17,11 +17,11 @@ function App() {
    
       <BrowserRouter>
         <Layout className="layout">
-          <Header>
+          <Header >
             <div className="logo" >
               <Link to='/'><img src={logo} style={{ height: '50px' }} alt='' /></Link>
-             {/* <Button type="primary" className='HeaderBtn'>
-                <Link to='/'>Sign In</Link></Button >*/}
+              <Button type="primary" className='HeaderBtn'>
+                <Link to='/'>Sign In</Link></Button >
             </div>
 
           </Header>
