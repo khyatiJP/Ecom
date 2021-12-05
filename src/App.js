@@ -21,7 +21,7 @@ function App() {
             <div className="logo" >
               <Link to='/'><img src={logo} style={{ height: '50px' }} alt='' /></Link>
               <Button type="primary" className='HeaderBtn'>
-                <Link to='/'>Sign In</Link></Button >
+                <Link to='/SignUp'>Sign In</Link></Button >
             </div>
 
           </Header>
@@ -30,7 +30,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Landing/>} />
               <Route path="/MenuItem/*" element={<Item />} />
-              <Route path="/Landing" element={<Landing />} />
+              <Route path="/SignUp" element={<SignUp />} />
 
             </Routes>
 

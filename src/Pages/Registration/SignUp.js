@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'
 import { Row, Col, Form, Input, Button } from 'antd';
 import FeatherIcon from 'feather-icons-react';
@@ -9,27 +9,22 @@ import { setCurrentUser } from './SignupAction'
 import { useDispatch } from "react-redux";
 
 const SignUp = ({ currentUser }) => {
-    let history = useNavigate ();
-    const [inputFields ,SetField]=useState({
-        email:'',
-        password:''
+    let history = useNavigate();
+    const [inputFields, SetField] = useState({
+        email: '',
+        password: ''
     })
     const validateMessages = {
 
     };
     //const LoginUser =useSelector((state)=>state.UserReducer)
     const dispatch = useDispatch();
-   const  handleSubmit = (e) => {
-        e.preventDefault();
-        var obj={
-            id:inputFields.email,
-            name :inputFields.password
-        }
-        dispatch(setCurrentUser(obj))
-        history("/Landing");
+    const handleSubmit = (e) => {
+       
+      //  history("/Landing");
     }
-    const  InputChange = (e) => {
-        SetField({[e.target.name]:[e.target.value]})
+    const InputChange = (e) => {
+        SetField({ [e.target.name]: [e.target.value] })
     }
     //history("/Landing");
     /* const [loginUser, SetCurrentUser] = useState('')
@@ -60,28 +55,28 @@ const SignUp = ({ currentUser }) => {
                                     label="Email Address"
                                     rules={[{ required: true, message: 'Email required!' }]}
                                 >
-                                    <Input 
-                                    prefix={<FeatherIcon icon="mail" size={6} />} 
-                                    placeholder="Enter Email" 
-                                    onChange={InputChange} />
+                                    <Input
+                                        prefix={<FeatherIcon icon="mail" size={6} />}
+                                        placeholder="Enter Email"
+                                        onChange={InputChange} />
                                 </Form.Item>
                                 <Form.Item name="password" label="Password"
                                     rules={[{ required: true, message: 'Password required!' }]}
                                 >
-                                    <Input.Password 
-                                    prefix={<FeatherIcon icon="lock" size={6}
-                                    onChange={InputChange} />} />
+                                    <Input.Password
+                                        prefix={<FeatherIcon icon="lock" size={6}
+                                            onChange={InputChange} />} />
                                 </Form.Item>
                                 <div className="sDash_form-action">
-                                    <Button className="btn-signin" type="primary" size="large" htmlType="button" onClick={handleSubmit}>
+                                    <Button className="btn-signin" type="primary" size="large" htmlType="submit" onClick={handleSubmit}>
                                         Sign In
                                     </Button>
-                                    <Button className="btn-signin" type="primary" size="large" onClick={signWithGoogle}>
+                                    { /* <Button className="btn-signin" type="primary" size="large" onClick={signWithGoogle}>
                                         Sign In With Google
                                     </Button>
                                     <Button className="btn-signin" type="primary" size="large" onClick={() => auth.signOut()}>
                                         Sign Out from Google
-                                    </Button>
+                                    </Button>*/}
 
 
                                 </div>

@@ -1,13 +1,11 @@
-import axios from 'axios'
+import apirequest from './../helper/apicall'
 function Service() {
     var list = async () => {
       
-        return await axios.get("http://localhost:3006/sections").then((response) => {
-            console.log(response.data)
+        return apirequest.get("sections").then((response) => {           
             return response.data
         });
     }
-
     return list;
 }
 
