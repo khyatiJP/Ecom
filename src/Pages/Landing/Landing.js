@@ -18,7 +18,6 @@ export const Landing = () => {
                     (items) ?
                         items.map((list) => {
                             return <Menu menulist={list} key={list.id} />
-
                         }) : ''
                 }
 
